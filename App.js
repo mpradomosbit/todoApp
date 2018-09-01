@@ -36,7 +36,7 @@ export default class App extends Component<Props> {
 
   agregarTarea = () => {
     this.setState({
-      tareas: [...this.state.tareas, this.state.texto],
+      tareas: [...this.state.tareas, {texto: this.state.texto,key: Date.now()}],
       texto: ''
     });
     //console.log(this.state.tareas.length)

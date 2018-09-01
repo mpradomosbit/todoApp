@@ -21,7 +21,9 @@ class Header extends Component<HeaderProps, HeaderState> {
       <View style={container}>
         <Text>HEADER</Text>
         <TextInput
-          style={{paddingHorizontal: 16}}
+          style={{
+              paddingHorizontal: 16,
+                  fontSize:24}}
           placeholder={"Escribe Tu Texto"}
           onChangeText={this.props.cambiarTexto}
           onSubmitEditing={this.props.agregar}

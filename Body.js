@@ -1,6 +1,7 @@
 //@flow
 import React, {Component} from 'react';
 import {View, Text, StyleSheet,FlatList} from 'react-native';
+import Tarea from './Tarea';
 
 type BodyProps = {}
 type BodyState = {}
@@ -21,10 +22,8 @@ class Body extends Component<BodyProps, BodyState> {
       <View style={container}>
 <Text>perrus</Text>
         <FlatList data={this.props.tareas}
-        renderItem={(item)=>{
-        console.log(item);
-        return (<Text>1</Text>)
-        }}/>
+        renderItem={ ({item}) =>  <Text>{<Tarea item={item}/>} </Text> }
+        />
       </View>
     );
   }
